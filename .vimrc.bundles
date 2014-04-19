@@ -21,6 +21,12 @@
 "   You can find me at http://spf13.com
 " }
 
+" Disable most bundles...
+" We need to set this here to avoid cloning all bundles, see:
+"    https://github.com/spf13/spf13-vim/issues/597
+let g:override_spf13_bundles = 1
+
+
 " Environment {
 
     " Basics {
