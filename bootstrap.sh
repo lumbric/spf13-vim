@@ -2,7 +2,7 @@
 ############################  SETUP PARAMETERS
 app_name='spf13-vim'
 app_dir="$HOME/.spf13-vim-3"
-[ -z "$git_uri" ] && git_uri='https://github.com/spf13/spf13-vim.git'
+[ -z "$git_uri" ] && git_uri='https://github.com/lumbric/spf13-vim.git'
 git_branch='3.0'
 debug_mode='0'
 fork_maintainer='0'
@@ -113,7 +113,8 @@ create_symlinks() {
     lnif "$endpath/.vimrc"              "$HOME/.vimrc"
     lnif "$endpath/.vimrc.bundles"      "$HOME/.vimrc.bundles"
     lnif "$endpath/.vimrc.before"       "$HOME/.vimrc.before"
-    lnif "$endpath/.vim"                "$HOME/.vim"
+    # I prefer to be .vim directly in ~.vim --> do not create link
+    #lnif "$endpath/.vim"                "$HOME/.vim"
 
     # Useful for fork maintainers
     touch  "$HOME/.vimrc.local"
